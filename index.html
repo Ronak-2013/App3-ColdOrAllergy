@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Ronak Thomas
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -49,6 +49,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
         }
+	
+	function results_display(){
+		var resultText = document.getElementById("results");
+		var allergyPercent = 100 * (allergy_count/allergy_count+cold_count));
+		var coldPercent = 100 * (allergy_count/allergy_count+cold_count));
 
   </script>
 
@@ -76,6 +81,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 }
 </style>
 
+
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>Cold or Allergies?</h1>
@@ -96,8 +102,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Put Question 1 content here.</p>    
-    	</div>
+		<p>Are your eyes watery or itchy?</p>
+		<a href="#two”  onclick="allergyAdd();” class="w3-btn w3-black"> Yes</a>
+		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	 </div><!-- /content -->
+
 </div>
 
 <div class="page" id="two">
